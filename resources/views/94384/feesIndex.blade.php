@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="{{ app()->getLocale() }}">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title> Student Fee Payment Plan</title>
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+    <h1>Payment Plan</h1>
+    @if(count($fees) > 1)
+        @foreach($fees as $fee)
+            <div class="well">
+                <h3><a href="/feesIndex/{{$fee->id}}">{{$fee->first_name}}</a></h3>
+                <small>written on{{$fee->created_at}}</small>
+            </div>
+
+        @endforeach
+
+    @else
+        <p>No Records to display</p>
+
+    @endif
+
+</body>
+
+</html>
+
