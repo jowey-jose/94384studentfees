@@ -37,6 +37,7 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
+
         $this->validate($request,[
             'first_name'=>'required',
             'last_name'=>'required',
@@ -46,17 +47,16 @@ class StudentController extends Controller
             'password'=>'required'
         ]);
 
-        $student = new Student([
-            'first_name'=>$request->input('first_name'),
-            'last_name'=>$request->input('last_name'),
-            'course'=>$request->input('	course'),
-            'year'=>$request->input('year'),
-            'email'=>$request->input('email'),
-            'password'=>$request->input('password')
-        ]);
+        $student = new Student();
+        $student->first_name = $request->input('first_name');
+        $student->last_name = $request->input('last_name');
+        $student->course = $request->input('course');
+        $student->year = $request->input('year');
+        $student->email = $request->input('email');
+        $student->password = $request->input('password');
 
         $student->save();
-        return redirect()->to('/')->with('Success your details have been received');
+        return redirect()->to('/studentIndex')->with('Success your details have been received');
 
     }
 

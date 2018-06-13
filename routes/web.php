@@ -23,4 +23,8 @@ Route::resource('studentIndex','StudentController');
 
 Route::resource('feesIndex','FeesController');
 
-Route::post('store','StudentController@store');
+Route::post('/storeStudent','StudentController@store');
+
+Route::post('/storeFees','FeesController@store');
+
+

@@ -24,6 +24,7 @@
         <p>No Records to display</p>
 
     @endif
+    <a href="{{url('/')}}" class="btn btn-default">go back</a>
 
 </body>
 

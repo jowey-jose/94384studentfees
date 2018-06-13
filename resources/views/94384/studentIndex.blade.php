@@ -25,6 +25,8 @@
 
 @endif
 
+<a href="{{url('/')}}" class="btn btn-default">go back</a>
+
 </body>
 
 </html>

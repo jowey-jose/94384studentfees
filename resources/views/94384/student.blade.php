@@ -12,7 +12,7 @@
 
 <div class="container">
     <h2>New student Registration Form</h2>
-    <form action="{{action('StudentController@store')}}" method="post">
+    <form action="{{url('/storeStudent')}}" method="post">
 
         {{csrf_field()}}
 
@@ -25,7 +25,7 @@
             <input type="text" class="form-control" id="lName" placeholder="Enter your last name" name="last_name">
         </div>
         <div class="form-group">
-            <label for="email">Course:</label>
+            <label for="course">Course:</label>
             <input type="text" class="form-control" id="course" placeholder="Enter your course" name="course">
         </div>
         <div class="form-group">
@@ -44,7 +44,7 @@
             <label><input type="checkbox" name="remember"> Remember me</label>
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
-        <button type="submit" class="btn btn-default">go back</button>
+        <a href="{{url('/')}}" class="btn btn-default">go back</a>
     </form>
 </div>
 
