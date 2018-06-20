@@ -82,11 +82,16 @@
                 <div class="title m-b-md">
                     Student Home Page
                 </div>
+                <form action="/search_page.php">
+                    <input type="text" placeholder="Search.." name="search">
+                    <button type="submit">Submit</button>
+                </form>
 
                 <div class="links">
                     <a href="{{url('94384/student')}}">Student</a>
                     <a href="{{url('94384/fees')}}">Fees</a>
                 </div>
+
             </div>
         </div>
     </body>
